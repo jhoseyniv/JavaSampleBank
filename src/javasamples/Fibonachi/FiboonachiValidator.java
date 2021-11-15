@@ -1,4 +1,4 @@
-package javasamples;
+package javasamples.Fibonachi;
 
 public class FiboonachiValidator {
 
