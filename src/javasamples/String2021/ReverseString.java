@@ -1,4 +1,4 @@
-package StringTools;
+package javasamples.String2021;
 
 import java.util.ArrayList;
 
