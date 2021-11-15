@@ -1,4 +1,4 @@
-package javasamples.hackerrank.stringutils;
+package javasamples.String2021;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
