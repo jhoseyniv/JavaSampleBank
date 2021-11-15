@@ -1,4 +1,4 @@
-package LinkList;
+package javasamples.LinkList;
 import java.util.LinkedList;
 
 public class SortLinkedList {
