@@ -40,6 +40,20 @@ public class Regex_Matcher {
         return  isMatch;
     }
 
+    public static  String  RemoveduplicateWordByChecker(String input){
+        String duplicate_REGEX="\\b(\\w+)(?:\\W+\\1\\b)+";
+        Pattern duplicateWord_pattern= Pattern.compile(duplicate_REGEX,Pattern.MULTILINE+Pattern.CASE_INSENSITIVE);
+        Matcher m= duplicateWord_pattern.matcher(input);
+        while (m.find()) {
+            input
+                    = input.replaceAll(
+                    m.group(),
+                    m.group(1));
+        }
+        return input;
+}
+
+
     @Test
     public static void testUsingSimpleRegex() {
        String  emailAddress = "(username@domain.com";
@@ -49,9 +63,17 @@ public class Regex_Matcher {
     public static void main(String args[]){
         String input_IP="255.22.0.252";
         String input_EMIAL="hhdfgdfg;";
+        String input_duplicateWord="Goodbye bye bye world world world";
+        String input_duplicateWord2=" Reya is is the the best player in eye eye game";
+
         ipv4_Checker(input_IP);
         email_Checker(input_EMIAL);
-       // testUsingSimpleRegex();
-
+        testUsingSimpleRegex();
+        System.out.println("Before Remove duplicate words = " + input_duplicateWord);
+        System.out.println("Before Remove duplicate words = " + input_duplicateWord2);
+        String output= RemoveduplicateWordByChecker(input_duplicateWord);
+        String output2= RemoveduplicateWordByChecker(input_duplicateWord2);
+        System.out.println("After Remove duplicate words= " + output);
+        System.out.println("After Remove duplicate words= " + output2);
     }
 }
