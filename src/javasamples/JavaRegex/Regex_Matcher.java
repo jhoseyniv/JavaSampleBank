@@ -2,8 +2,13 @@ package javasamples.JavaRegex;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -53,6 +58,28 @@ public class Regex_Matcher {
         return input;
 }
 
+    public static int lonelyinteger(List<Integer> a){
+       Integer result=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
+
+        for(int i=0;i<a.size();i++){
+            if(!map.containsKey(a.get(i))) {
+                map.put(a.get(i),i);
+                System.out.println(a.get(i));
+            }else{
+                map.remove(a.get(i));
+            }
+
+        }
+        Map.Entry entry=null;
+        Iterator it = map.entrySet().iterator();
+        if(it.hasNext()) {
+             entry = (Map.Entry) it.next();
+            result = (Integer)entry.getKey();
+        }
+        return  result.intValue();
+    }
+
 
     @Test
     public static void testUsingSimpleRegex() {
@@ -75,5 +102,9 @@ public class Regex_Matcher {
         String output2= RemoveduplicateWordByChecker(input_duplicateWord2);
         System.out.println("After Remove duplicate words= " + output);
         System.out.println("After Remove duplicate words= " + output2);
+
+        ArrayList<Integer> a= new ArrayList<Integer>(Arrays.asList(1,2,3,4,3,2,1));
+        int r=lonelyinteger( a);
+
     }
 }
