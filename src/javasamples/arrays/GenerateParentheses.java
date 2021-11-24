@@ -26,6 +26,14 @@ public class GenerateParentheses {
         if(!stack.isEmpty()) return false;
         return  valid;
     }
+    public static void GeneratePermRecusive(int start,String s){
+        if(s.length()==start) {
+            return;
+        }
+        System.out.println(s.substring(0,start+1));
+        GeneratePermRecusive(start+1,s);
+    }
+
     public static void GenerateAllPermuation(String st){
         int[] mask= new int[st.length()];
         long num= (long)Math.pow(2,mask.length);
@@ -34,22 +42,21 @@ public class GenerateParentheses {
            String binary = Long.toBinaryString(i);
            String result = String.format("%" + st.length() + "s", binary).replace(' ', '0');
            StringBuilder permiuation = new StringBuilder(result);
-
            for (int j = 0; j < permiuation.length(); j++) {
-
-               if (permiuation.charAt(j) == '0') {
+              if (permiuation.charAt(j) == '0') {
                    permiuation.setCharAt(j, '-');
                } else if (result.charAt(j) == '1')
                    permiuation.setCharAt(j, st.charAt(j));
            }
-           if(isValid(permiuation.toString()))
+         //  if(isValid(permiuation.toString()))
                 System.out.println(permiuation  );
           // else      System.out.println(permiuation + " is  NOT Valid experssion" );
 
        }
     }
     public static void main(String[] args){
-        String st="((()))";
-        GenerateAllPermuation(st);
+        String st="abcd";
+       // GenerateAllPermuation(st);
+        GeneratePermRecusive(0,st);
     }
 }
