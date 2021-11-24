@@ -1,6 +1,5 @@
 package javasamples.sort;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
@@ -55,8 +54,8 @@ public class SortBycomparetor {
 
         input.sort(myComparetorASC);
 
-        Assert.assertArrayEquals(input.toArray(), output.toArray());
-        Assert.assertArrayEquals(input.toArray(), new ArrayList<Integer>(Arrays.asList(1,2,3,4)).toArray());
+       assertArrayEquals(input.toArray(), output.toArray());
+        assertArrayEquals(input.toArray(), new ArrayList<Integer>(Arrays.asList(1,2,3,4)).toArray());
 
 
 
