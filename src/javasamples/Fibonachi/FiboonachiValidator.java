@@ -22,7 +22,7 @@ public class FiboonachiValidator {
 
         while(flag){
             next =current + pervious;
-            System.out.println("next = "+ next);
+            //System.out.println("next = "+ next);
             if(next==fibo) {
                 isFiboo=true;
                 flag = false;
@@ -43,10 +43,10 @@ public class FiboonachiValidator {
         long X1_sqrt = (long)Math.sqrt(X1);
         long X2_sqrt = (long)Math.sqrt(X2);
         if(X1_sqrt * X1_sqrt == X1 || X2_sqrt*X2_sqrt==X2) {
-            System.out.println(n + " IS A fibonacci number based on equation n^4+2 ");
+            //System.out.println(n + " IS A fibonacci number based on equation n^4+2 ");
             result =true;
         }else{
-            System.out.println(n + " is NOT fibonacci number based on equation n^4+2 ");
+           // System.out.println(n + " is NOT fibonacci number based on equation n^4+2 ");
             result =false;
         }
         return result;
