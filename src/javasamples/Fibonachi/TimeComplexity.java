@@ -9,14 +9,14 @@ public class TimeComplexity {
 
         //time for fibo recuresive
         long start1= new Date().getTime();
-        FibonacciNumbers.fiboRecurseive(50);
+        FibonacciNumbers.fiboRecurseive(30);
         long end1= new Date().getTime();
         long difference = end1 - start1;
         System.out.println(difference + " mili seconds.");
 
         //time for fibo dynamic programming
         long start2= new Date().getTime();
-        FibonacciNumbers.fiboDP(150000);
+        FibonacciNumbers.fiboDP(1500000);
         long end2= new Date().getTime();
         long difference2 = end2 - start2;
 
