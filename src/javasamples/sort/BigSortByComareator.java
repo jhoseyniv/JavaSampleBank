@@ -17,7 +17,7 @@ public class BigSortByComareator {
 
     public static void main(String args[]){
         List<String> unsorted= new ArrayList<>(
-                Arrays.asList("98765438877876868678678678678210","00000000001","00000000003","00000000010","00000000003","00000000005","3084193741")
+                Arrays.asList("6","31415926535897932384626433832795","1","3","10","3","5")
         );
 
         int max = unsorted.stream().map(String::length).max(Integer::compareTo).get();
@@ -31,6 +31,9 @@ public class BigSortByComareator {
            }
          }
         unsorted.sort(myComparetor);
+        for(int i=0;i<unsorted.size();i++)
+           unsorted.set(i ,unsorted.get(i).replaceFirst ("^0*", ""));
+
 
     }
 }
