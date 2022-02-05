@@ -15,6 +15,11 @@ public class MyTreeImpl {
         myBinaryTree.addNode(myBinaryTree.getRoot(),5,"34");
         myBinaryTree.addNode(myBinaryTree.getRoot(),7,"45");
         myBinaryTree.addNode(myBinaryTree.getRoot(),9,"56");
+        myBinaryTree.addNode(myBinaryTree.getRoot(),2,"67");
+        myBinaryTree.addNode(myBinaryTree.getRoot(),0,"78");
+        myBinaryTree.addNode(myBinaryTree.getRoot(),-3,"78");
+        myBinaryTree.addNode(myBinaryTree.getRoot(),10,"78");
+        myBinaryTree.addNode(myBinaryTree.getRoot(),11,"78");
 
         System.out.println("Pre Order travers of this tree is : ");
         myBinaryTree.preOrderTravers(myBinaryTree.getRoot());
@@ -47,6 +52,12 @@ public class MyTreeImpl {
         System.out.println("<---------------- Find Height Of Tree ------------------>");
         int height = myBinaryTree.getHeightOfTree(myBinaryTree.getRoot());
         System.out.println("Height of tree is : " + height);
+
+        System.out.println("<---------------- Is Tree is Binary Search Or Not ------------------>");
+        boolean isBSTTree = myBinaryTree.isTreeBST(myBinaryTree.getRoot());
+        System.out.println("This tree is BST ? : " + isBSTTree);
+
+
 
     }
 }

@@ -24,7 +24,8 @@ public class MyBinaryTree {
     }
 
     public void addNode(MyNode current, int value, String lable){
-         if(value < current.getValue()) {
+        ///if(current==null) return new MyNode(value,lable);
+        if(value < current.getValue()) {
              if(current.left != null) {
                  addNode(current.left,value,lable);
              }
@@ -96,6 +97,14 @@ public class MyBinaryTree {
             if(leftH > rightH ) return  leftH+1;
             else  return  rightH +1;
     }
+    public boolean isTreeBST(MyNode root){
+        if(root == null ) return  true;
+        if( root.left !=null && root.getValue() < root.left.getValue() ) return false;
+        if( root.right  !=null && root.getValue() > root.right.getValue() ) return false;
 
+         if(!isTreeBST(root.left) ||   !isTreeBST((root.right)) ) return false;
+
+         return true;
+    }
 
 }

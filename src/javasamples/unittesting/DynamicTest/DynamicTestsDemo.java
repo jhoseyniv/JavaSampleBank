@@ -37,6 +37,7 @@ public class DynamicTestsDemo {
                 dynamicTest("3nd dynamic test", () -> assertEquals(10, calculator.multiply(2, 5)))
         );
     }
+
     @TestFactory
     Iterator<DynamicTest> dynamicTestIterator(){
         return Arrays.asList(
