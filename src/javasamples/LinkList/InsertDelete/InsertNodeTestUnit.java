@@ -1,8 +1,7 @@
 package javasamples.LinkList.InsertDelete;
 
-import  static  org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
 
 public class InsertNodeTestUnit {
         InsertNode insertNode= new InsertNode();
