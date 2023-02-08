@@ -1,6 +1,5 @@
 package javasamples.designpattern.Behavioral.Observer;
 
-import org.junit.jupiter.api.Test;
 
 public class ObserverImpl {
 
@@ -9,7 +8,6 @@ public static void main(String args[]){
 
 
  }
-        @Test
         public void observersHandleEventsFromSubject() {
                 MyServer<String> server = new MyServerImp("Server");
 
